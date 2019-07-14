@@ -24,11 +24,6 @@
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
-                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
-                                        <menuItem title="Services" id="NMo-om-nkz">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
-                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
                                         <menuItem title="Hide macOS Calculator" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
@@ -515,6 +510,28 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rkh-F0-gVp">
+                                <rect key="frame" x="26" y="112" width="88" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="F° to C°" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7Gz-Qc-MxW">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="fc:" target="XfG-lQ-9wD" id="zEG-WA-RR6"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QsV-9A-zoD">
+                                <rect key="frame" x="26" y="79" width="88" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="C° to F°" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mGo-UY-JNY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cf:" target="XfG-lQ-9wD" id="o6R-AX-bYt"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>

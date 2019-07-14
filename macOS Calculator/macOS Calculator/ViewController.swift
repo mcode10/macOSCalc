@@ -38,6 +38,15 @@ var operation:operatorCases = .add
         display_Panel.stringValue = String(calcEngine.positiveNegative(original: Double(display_Panel.stringValue)!))
     }
     
+    @IBAction func fc(_ sender: NSButton) {
+        display_Panel.stringValue = calcEngine.fc(original: Double(display_Panel.stringValue)!)
+        answer = display_Panel.stringValue
+    }
+    
+    @IBAction func cf(_ sender: NSButton) {
+        display_Panel.stringValue = calcEngine.cf(original: Double(display_Panel.stringValue)!)
+    }
+    
     @IBAction func operators(_ sender: NSButtonCell) {
         //TODO Make a library full of code linked to CalcEngine and
         // CalcEngineProtocol
