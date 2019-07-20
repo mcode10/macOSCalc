@@ -13,6 +13,7 @@
 		190BF6A52299EAD10072D44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190BF6A32299EAD10072D44A /* Main.storyboard */; };
 		190BF6AE2299F33A0072D44A /* CalcEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190BF6AD2299F3390072D44A /* CalcEngineProtocol.swift */; };
 		190BF6B02299F34F0072D44A /* CalculatorEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190BF6AF2299F34F0072D44A /* CalculatorEngine.swift */; };
+		19B3533F22E3C401007D3582 /* helpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B3533E22E3C401007D3582 /* helpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		190BF6A72299EAD10072D44A /* macOS_Calculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS_Calculator.entitlements; sourceTree = "<group>"; };
 		190BF6AD2299F3390072D44A /* CalcEngineProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalcEngineProtocol.swift; sourceTree = "<group>"; };
 		190BF6AF2299F34F0072D44A /* CalculatorEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorEngine.swift; sourceTree = "<group>"; };
+		19B3533E22E3C401007D3582 /* helpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				190BF6A32299EAD10072D44A /* Main.storyboard */,
 				190BF6A62299EAD10072D44A /* Info.plist */,
 				190BF6A72299EAD10072D44A /* macOS_Calculator.entitlements */,
+				19B3533E22E3C401007D3582 /* helpView.swift */,
 			);
 			path = "macOS Calculator";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 				190BF6AE2299F33A0072D44A /* CalcEngineProtocol.swift in Sources */,
 				190BF6B02299F34F0072D44A /* CalculatorEngine.swift in Sources */,
 				190BF6A02299EACF0072D44A /* ViewController.swift in Sources */,
+				19B3533F22E3C401007D3582 /* helpView.swift in Sources */,
 				190BF69E2299EACF0072D44A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

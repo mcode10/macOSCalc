@@ -47,6 +47,7 @@ var operation:operatorCases = .add
         display_Panel.stringValue = calcEngine.cf(original: Double(display_Panel.stringValue)!)
     }
     
+    
     @IBAction func operators(_ sender: NSButtonCell) {
         //TODO Make a library full of code linked to CalcEngine and
         // CalcEngineProtocol
