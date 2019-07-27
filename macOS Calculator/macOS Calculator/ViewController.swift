@@ -13,13 +13,19 @@ class ViewController: NSViewController {
 var calcEngine = getCalcEngine()
 var answer = ""
 var operation:operatorCases = .add
+var inDarkMode: Bool {
+    let mode = UserDefaults.standard.string(forKey: "AppleInterfaceStyle")
+    return mode == "Dark"
+}
     
     @IBOutlet var display_Panel: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor.white.cgColor
+        if !inDarkMode {
+            view.layer?.backgroundColor = NSColor.white.cgColor
+        }
     }
 
     override var representedObject: Any? {
@@ -40,12 +46,12 @@ var operation:operatorCases = .add
     
     @IBAction func fc(_ sender: NSButton) {
         display_Panel.stringValue = calcEngine.fc(original: Double(display_Panel.stringValue)!)
-        answer = display_Panel.stringValue
     }
     
     @IBAction func cf(_ sender: NSButton) {
         display_Panel.stringValue = calcEngine.cf(original: Double(display_Panel.stringValue)!)
     }
+    
     
     @IBAction func operators(_ sender: NSButtonCell) {
         //TODO Make a library full of code linked to CalcEngine and
