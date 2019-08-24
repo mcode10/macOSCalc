@@ -26,6 +26,7 @@ var inDarkMode: Bool {
         if !inDarkMode {
             view.layer?.backgroundColor = NSColor.white.cgColor
         }
+        assert(answer == "" && operation == .add && display_Panel.stringValue == "0", "We messed up our set-up.")
     }
 
     override var representedObject: Any? {
@@ -42,6 +43,8 @@ var inDarkMode: Bool {
     
     @IBAction func positiveNegative(_ sender: Any) {
         display_Panel.stringValue = String(calcEngine.positiveNegative(original: Double(display_Panel.stringValue)!))
+        self.clear(sender)
+        assert(display_Panel.stringValue == "0" && answer == "")
     }
     
     @IBAction func fc(_ sender: NSButton) {
@@ -68,6 +71,8 @@ var inDarkMode: Bool {
             case 20:
                 operation = .divide
             default:
+                assert(display_Panel.stringValue != "0", "The user didn't press anything.")
+                assert(false, "This shouldn't be happening")
                 print("This shouldn't be happening")
                 sleep(5)
                 exit(0)
@@ -85,6 +90,8 @@ var inDarkMode: Bool {
             case 20:
                 operation = .divide
             default:
+                assert(display_Panel.stringValue != "0", "The user didn't press anything.")
+                assert(false, "This shouldn't be happening")
                 print("This shouldn't be happening")
                 sleep(5)
                 exit(0)
@@ -97,6 +104,8 @@ var inDarkMode: Bool {
     
     @IBAction func percent(_ sender: Any) {
         display_Panel.stringValue = String(calcEngine.percenter(original: Double(display_Panel.stringValue)!))
+        self.clear(sender)
+        assert(display_Panel.stringValue == "0" && answer == "")
     }
     
     @IBAction func equalPressed(_ sender: Any) {
