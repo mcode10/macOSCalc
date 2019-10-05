@@ -26,7 +26,6 @@ class CalculatorEngine:CalcEngineProtocol {
         operation = operationPassed
     }
     func equalPressed(operand: Double) -> Double {
-        currentValue = operandStack.pop()
         print(currentValue, "I am from equalPressed")
         print(operation, "I am from equalPressed")
         switch operation {
@@ -39,21 +38,10 @@ class CalculatorEngine:CalcEngineProtocol {
         case .multiply:
             currentValue = multiply(operand1: currentValue, operand2: operand)
         }
-        operandStack.push(currentValue)
         print(currentValue, "I am from equalPressed")
         print(operation, "I am from equalPressed")
         return currentValue
     }
-    struct OperandStack {
-        var items = [Double]()
-        mutating func push(_ item: Double) {
-            items.append(item)
-        }
-        mutating func pop() -> Double {
-            return items.removeLast()
-        }
-    }
-    var operandStack = OperandStack()
     func percenter(original: Double) -> Double {
         return (original/100)
     }
@@ -78,13 +66,12 @@ class CalculatorEngine:CalcEngineProtocol {
     }
     func calcEngineInput(operand: Double, operationPassed: operatorCases) {
         if currentValue == Double(0) {
+            assert(operation == .add, "We changed the operand without the user doing anything.")
             operation = operationPassed
-            operandStack.push(operand)
             currentValue = operand
             print(currentValue, "I am from CalcEngineInput")
             print(operation, "I am from CalcEngineInput")
         } else {
-            currentValue = operandStack.pop()
             print(currentValue, "I am from CalcEngineInput")
             switch operation {
             case .add:
@@ -96,7 +83,6 @@ class CalculatorEngine:CalcEngineProtocol {
             case .divide:
                 currentValue = division(operand1: currentValue, operand2: operand)
             }
-            operandStack.push(currentValue)
             print(currentValue, "I am from CalcEngineInput")
             operation = operationPassed
             print(operation, "I am from CalcEngineInput")
